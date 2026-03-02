@@ -6,9 +6,9 @@ public class Main {
         MySQLCRUD mysql = new MySQLCRUD();
         MongoCRUD mongo = new MongoCRUD();
 
-        com.retail.Customer c1 = new com.retail.Customer(1,"John","Doe","john@email.com","111-222","NY");
-        com.retail.Customer c2 = new com.retail.Customer(2,"Jane","Smith","jane@email.com","333-444","LA");
-        com.retail.Customer c3 = new com.retail.Customer(3,"Mike","Brown","mike@email.com","555-666","TX");
+        com.retail.Customer c1 = new com.retail.Customer(1,"Sarah","Kelly","sarah@email.com","111-222","NY");
+        com.retail.Customer c2 = new com.retail.Customer(2,"Grace","Smith","gracesmith@email.com","333-444","LA");
+        com.retail.Customer c3 = new com.retail.Customer(3,"Mike","Morris","mike@email.com","555-666","TX");
 
         // CREATE
         mysql.create(c1);
