@@ -44,4 +44,16 @@ public class Customer {
         return address;
     }
 
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
+
 }

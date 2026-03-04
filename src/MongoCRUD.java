@@ -1,4 +1,3 @@
-package com.retail;
 
 import com.mongodb.client.*;
 import org.bson.Document;
@@ -15,7 +14,7 @@ public class MongoCRUD {
         collection = database.getCollection("IST888IST888");
     }
 
-    public void create(com.retail.Customer customer) {
+    public void create(Customer customer) {
         Document doc = new Document("id", customer.getId())
                 .append("firstName", customer.getFirstName())
                 .append("lastName", customer.getLastName())

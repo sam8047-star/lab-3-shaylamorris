@@ -1,4 +1,4 @@
-package com.retail;
+
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ public class MySQLCRUD {
         return DriverManager.getConnection(url, user, password);
     }
 
-    public void create(com.retail.Customer customer) {
+    public void create(Customer customer) {
         String sql = "INSERT INTO Customer VALUES (?, ?, ?, ?, ?, ?)";
         try (Connection conn = connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -34,8 +34,8 @@ public class MySQLCRUD {
         }
     }
 
-    public List<com.retail.Customer> readAll() {
-        List<com.retail.Customer> customers = new ArrayList<>();
+    public List<Customer> readAll() {
+        List<Customer> customers = new ArrayList<>();
         String sql = "SELECT * FROM Customer";
 
         try (Connection conn = connect();
@@ -43,7 +43,7 @@ public class MySQLCRUD {
              ResultSet rs = stmt.executeQuery(sql)) {
 
             while (rs.next()) {
-                com.retail.Customer c = new com.retail.Customer(
+                Customer c = new Customer(
                         rs.getInt("id"),
                         rs.getString("firstName"),
                         rs.getString("lastName"),
@@ -61,7 +61,7 @@ public class MySQLCRUD {
         return customers;
     }
 
-    public void update(com.retail.Customer customer) {
+    public void update(Customer customer) {
         String sql = "UPDATE Customer SET email=? WHERE id=?";
         try (Connection conn = connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
